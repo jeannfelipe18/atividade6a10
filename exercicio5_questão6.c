@@ -2,12 +2,12 @@
 
 main(){
     
-   int num1;
+   int numero;
 
    printf("Digite o numero inteiro: ");
-   scanf("%d", &num1);
+   scanf("%d", &numero);
 
-   if(num1 % 2 ==0){
+   if(numero % 2 ==0){
     printf("O numero é par");
    }
 }
