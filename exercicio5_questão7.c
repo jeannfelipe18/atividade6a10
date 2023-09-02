@@ -1,22 +1,33 @@
-#include<stdio.h>
+#include <stdio.h>
 
-main(){
-    float nota1, nota2, nota3, peso1 = 1, peso2 = 1, peso3 = 2, media_ponderada, nota_aprovacao = 7.0, resultado;
-    
-    printf("Digite a nota1: ");
+
+main() {
+   
+    float nota1, nota2, nota3, media;
+
+
+    printf("Digite a nota da primeira prova: ");
     scanf("%f", &nota1);
 
-    printf("\nDigite a nota2: ");
+
+    printf("Digite a nota da segunda prova: ");
     scanf("%f", &nota2);
 
-    printf("\nDigite a nota3: ");
+
+    printf("Digite a nota da terceira prova: ");
     scanf("%f", &nota3);
 
-    media_ponderada = nota1 * peso1 + nota2 * peso2 + nota3 * peso3 / (peso1 + peso2 + peso3);
-    
-    if(media_ponderada >= nota_aprovacao){
-        printf("Aprovado.");
-    }else{
-        printf("Reprovado.");
+
+    // Calcula a média ponderada
+    media = (nota1 + nota2 + (nota3 * 2)) / 4;
+
+
+    printf("A media do aluno eh: %.2f\n", media);
+
+
+    if (media >= 7.0) {
+        printf("Aluno aprovado!\n");
+    } else {
+        printf("Aluno reprovado.\n");
     }
 }
